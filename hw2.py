@@ -83,9 +83,10 @@
 # HINT: You can use the method '.items' on
 # dictionaries to iterate over them like a
 # list of tuples.
-
-
-
+def most_popular_job(cvs):
+    counts = job_counts(cvs)
+    most_popular = max(counts.items(), key=lambda item: item[1])
+    return most_popular
 ##############
 
 # Now imagine you have a certain data structure that
